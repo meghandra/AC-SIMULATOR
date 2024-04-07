@@ -1,0 +1,59 @@
+Project-
+https://www.tinkercad.com/things/inrOeNaHNit-daring-turing/editel?sharecode=Er8LXrTl1JvrgMDwH4eUKaOIiKzUER-B9wHtXbwR60k
+
+
+Connecting keypad to arduino through respective column keys and row keys as written in code
+
+We take keys input via loop and stop when # is pressed  converting it to an integer and print it on lcd via lcd.print()statement 
+
+But unfortunately the code worked well when none other component was used but diddnt worked in full circuit 
+
+Hope to learn it when i get onboarded to teamkart if possible could u pls tell why Serial.print()was also not working
+
+/https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/
+
+2.lcd:
+I have used lcd i2c instead of usual lcd as it requires less pin connections
+
+
+Initializing lcd and light its backlight
+
+Setting the cursor and printing fanspeed and temperature
+3.dc motor and potentiometer:
+I thought that for a knob at our temperature control system we can use potentiometer for this purpose
+
+Potentiometer is a device basically which has 3 terminals which consists of 2 to ground and power and 3rd as wiper 
+
+If we rotate the knob basically vout increases or decreases as load resistance increases/decreases
+
+This variable voltage is taken in analog pin from(0,1023) then its feed into digital pin https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/
+
+
+4.dc motor:
+Motor is used to run as a fan in our system
+I  had calibrated the fan speed by considireing linear plot between fanspeed and rpm
+https://forum.arduino.cc/t/how-to-control-motor-speed-with-potentiometer/997934
+
+
+
+
+4.Temperature sensor:
+I had connected tmp 36 for this purpose
+
+I had connected the sensor pin to an analog pin
+ 
+This signal will be further used to calculate temperature in degree celsius
+
+https://www.javatpoint.com/arduino-temperature-sensor#:~:text=The%20temperature%20sensor%20in%20Arduino,TMP%2036)%20of%20low%20voltage.
+
+
+
+
+5.push button :
+	When in on position creates a high voltage and when in off creates low voltage
+
+We can count n.o of times giving high and store it in say i then power the circuit via condition 
+
+If i is odd the power on
+https://docs.arduino.cc/built-in-examples/digital/Button
+
